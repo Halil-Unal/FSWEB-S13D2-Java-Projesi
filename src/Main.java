@@ -16,16 +16,14 @@ public class Main {
     }
 
     public static boolean isPalindrome(int number) {
-        String originalStr=String.valueOf(number);
-        String reversedStr="";
-        for (int i = 0; i < originalStr.length(); i++) {
-            reversedStr = originalStr.charAt(i) + reversedStr;
+        String originalStr = String.valueOf(number);
+        String reversedStr = "";
+        for (int i = originalStr.length() - 1; i >= 0; i--) {
+            reversedStr = reversedStr + originalStr.charAt(i);
         }
-        if(originalStr.equals(reversedStr)){
-            return true;
-        }
-        return false;
+        return originalStr.equals(reversedStr);
     }
+
 
     public static boolean isPerfectNumber(int number) {
         int sum=0;
